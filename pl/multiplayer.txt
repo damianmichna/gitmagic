@@ -1,8 +1,8 @@
 == Multiplayer Git ==
 
-Na początku zastosowałem Git w prywatnym projekcie, gdzie byłem jedynym programistą. Z poleceń, w związku z rozproszoną naturą Gita, potrzebowałem jedynie komende *pull* i *clone*, dzięki czemu mogłem trzymać ten sam projekt w kilku miejscach.
+Na początku zastosowałem Gita w prywatnym projekcie, w którym też byłem jedynym programistą. Z poleceń, w związku z rozproszoną naturą Gita, potrzebowałem jedynie komendę *pull* i *clone*, dzięki czemu mogłem przechowywać ten sam projekt w kilku miejscach.
 
-Później chciałem opublikować mój kod za pomocą Gita i dołączyć zmiany kolegów. Musiałem nauczyć się zarządzać projektami, nad którymi zaangażowani byli programiści z całego świata. Na szczęście jest to silną stroną Gita i chyba jego racją bytu.
+Później chciałem opublikować mój kod za pomocą Gita i dołączyć zmiany kolegów. Musiałem nauczyć się zarządzać projektami w których zaangażowani byli programiści z całego świata. Na szczęście jest to silną stroną Gita i chyba jego racją bytu.
 
 === Kim jestem? ===
 
@@ -13,9 +13,9 @@ Każdy 'commit' otrzymuje nazwę i adres e-mail autora, które zostaną pokazane
 
 Jeśli opóścisz przełącznik '--global' zmiany zostaną zastosowane wyłącznie do aktualnego repozytorium.
 
-=== Git przez SSH, HTTP ===
+=== Git przez 'SSH' i 'HTTP' ===
 
-Załóżmy, posiadasz dostęp SSH do serwera stron internetowych, gdzie jednak Git nie został zainstalowany. Nawet, jeśli jest to mniej efektywne jak rodzimy protokół 'GIT', Git potrafi komunikować się również przez HTTP.
+Załóżmy, posiadasz dostęp 'SSH' do serwera stron internetowych, gdzie jednak Git nie został zainstalowany. Nawet, jeśli jest to mniej efektywne jak rodzimy protokół 'GIT', Git potrafi komunikować się również przez 'HTTP'.
 
 Zładuj Git, skompiluj i zainstaluj pod własnym kontem oraz utwórz repozytorium w twoim katalogu strony internetowej.
 
@@ -28,23 +28,23 @@ Przy starszych wersjach Gita samo polecenie 'cp' nie wystarczy, wtedy musisz jes
 
  $ chmod a+x hooks/post-update
 
-Od teraz możesz publikować aktualizacje z każdego klonu poprzez SSH.
+Od teraz możesz publikować aktualizacje z każdego klonu poprzez 'SSH'.
 
  $ git push web.server:/sciezka/do/proj.git master
 
-i każdy może teraz sklonować twój projekt przez HTTP:
+i każdy może teraz sklonować twój projekt przez 'HTTP':
 
  $ git clone http://web.server/proj.git
 
 === Git ponad wszystko ===
 
-Chciałbyś synchronizować repozytoria bez pomocy serwera czy nawet bez użycia sieci komputerowej? Musisz improwizować w nagłym wypadku? Widzieliśmy, że poleceniami <<makinghistory, *git fast-export* i *git fast-import* możemy konwertować całe repozytoria w jeden jedyny plik i z powrotem>>. W ten sposób możemy transportować tego typu pliki za pomocą dowolnego medium, jednak bardziej wydajnym narzędziem jest *git bundle*.
+Chciałbyś synchronizować repozytoria bez pomocy serwera czy nawet bez użycia sieci komputerowej? Musisz improwizować w nagłym wypadku? Widzieliśmy, że poleceniami *git fast-export* i *git fast-import* możemy konwertować całe repozytoria w jeden jedyny plik i z powrotem. W ten sposób możemy transportować tego typu pliki za pomocą dowolnego medium, jednak bardziej wydajnym narzędziem jest *git bundle*.
 
 Nadawca tworzy 'bundle':
 
  $ git bundle create plik HEAD
 
-i transportuje 'bundle' +plik+ do innych zaangażowanych: przez e-mail, pendrive, *xxd* hexdump i skaner OCR, kod morsea, przez telefon, znaki dymne, itd. Odbiorca wyciąga 'commits' z 'bundle' poprzez podanie:
+i transportuje 'bundle' +plik+ do innych zaangażowanych: przez e-mail, pendrive, *xxd* hexdump i skaner OCR, kod Morsea, przez telefon, znaki dymne, itd. Odbiorca wyciąga 'commits' z 'bundle' poprzez podanie:
 
  $ git pull plik
 
@@ -62,19 +62,19 @@ a nowy 'bundle' tworzymy następnie poprzez:
 
  $ git bundle create nowy_bundle HEAD ^ostatni_bundle
 
-=== Patches: globalny środek płatniczy ===
+=== 'Patches': globalny środek płatniczy ===
 
-'Patches' to jawne zobrazowanie twoich zmian, które mogą być jednocześnie rozumiane przez komputer i człowieka. Dodaje im to uniwersalnej mocy przyciągania. Możesz wysłać patch prowadzącym projekt, niezależnie od tego, jakiego używają systemu kontroli wersji. Doputy twoi współpracownicy potrafią czytać swoje maile, mogą widzieć również twoje zmiany. Również i z twojej strony wszystko, czego ci potrzeba to funkcjonujące konto e-mailowe: nie istnieje konieczność zakładania repozytorium online.
+'Patches' to jawne zobrazowanie twoich zmian, które mogą być jednocześnie rozumiane przez komputer jak i człowieka. Dodaje im to uniwersalnej mocy przyciągania. Możesz wysłać 'patch' prowadzącym projekt, niezależnie od tego, jakiego używają systemu kontroli wersji. Doputy twoi współpracownicy potrafią czytać swoje maile, mogą widzieć również twoje zmiany. Również i z twojej strony wszystko, czego ci potrzeba to funkcjonujące konto e-mailowe: nie istnieje konieczność zakładania repozytorium online.
 
 Przypomnij sobie pierwszy rozdział:
 
  $ git diff 1b6d > mój.patch
 
-produkuje 'patch', który można dołączyć do e-maila dla dalszej dyskusji. W repozytorium Git natomiast podajesz:
+produkuje 'patch', który można dołączyć do e-maila dla dalszej dyskusji. W repozytorium Gita natomiast podajesz:
 
  $ git apply < mój.patch
 
-By zastosować patch.
+By zastosować 'patch'.
 
 W bardziej oficjalnym środowisku, jeśli nazwiska autorów i ich sygnatury powinny również być notowane, twórz 'patch' od pewnego punktu, po wpisaniu:
 
@@ -88,7 +88,7 @@ Po stronie odbiorcy zapamiętaj e-mail jako daną i podaj:
 
  $ git am < email.txt
 
-Patch zostanie wprowadzony i utworzy commit, włącznie z informacjami jak na przykład informacje o autorze.
+'Patch' zostanie wprowadzony i utworzy 'commit' zawierający między innymi informacje o autorze.
 
 Jeśli stosujesz webmail musisz ewentualnie poszukać opcji pokazania treści w formie niesformatowanego textu, zanim zapamiętasz patch do pliku.
 
@@ -106,19 +106,19 @@ Jeśli oryginalne repozytorium zostanie przesunięte, możemy zaktualizować lin
 
  $ git config remote.origin.url git://nowy_link/proj.git
 
-Opcja +branch.master.merge+ definiuje standardowy 'remote-branch' dla *git pull*. Podczas początkowego klonowania, zostanie ustawiony na aktualny branch źródłowego repozytorium, że nawet i po tym jak 'HEAD' źródłowego repozytorium przejdzie do innego branch, późniejszy 'pull' pozostanie wierny oryginalnemu branch.
+Opcja +branch.master.merge+ definiuje standardowy 'remote-branch' dla *git pull*. Podczas początkowego klonowania, zostanie ustawiony na aktualny 'branch' źródłowego repozytorium, że nawet i po tym jak 'HEAD' źródłowego repozytorium przejdzie do innego 'branch', późniejszy 'pull' pozostanie wierny oryginalnemu 'branch'.
 
-Ta opcja jest ważna jedynie dla repozytorium, z którego dokonało się pierwszego klonowania, co zapisane jest w opcji +branch.master.remote+. Przy 'pull' z innego repozytorium musimy podać z którego branch chcemy korzystać.
+Ta opcja jest ważna jedynie dla repozytorium, z którego dokonało się pierwszego klonowania, co zapisane jest w opcji +branch.master.remote+. Przy 'pull' z innego repozytorium musimy podać z którego 'branch' chcemy skorzystać.
 
  $ git pull git://example.com/inny.git master
 
 To wyjaśnia dlaczego nasze poprzednie przykłady z 'push' i 'pull' nie posiadały argumentów.
 
-=== Oddalone 'Branches' ===
+=== Oddalone 'branche' ===
 
-Jeśli klonujesz repozytorium, klonujesz również wszystkie jego 'branches' Może jeszcze tego nie zauważyłaś, ponieważ Git je ukrywa: musisz się o nie specjalnie pytać: To zapobiega temu, że branches z oddalonego repozytorium nie przeszkadzają twoim lokalnym branches i czyni to Git łatwiejszym dla początkujących.
+Jeśli klonujesz repozytorium, klonujesz również wszystkie jego 'branche'. Może jeszcze tego nie zauważyłaś, ponieważ Git je ukrywa: musisz się o nie celowo spytać. To zapobiega temu, że 'branche' z oddalonego repozytorium nie przeszkadzają twoim lokalnym i czyni to też Gita łatwiejszym dla początkujących.
 
-Oddalone 'branches' możesz pokazać poprzez:
+Oddalone 'branche' możesz pokazać poprzez:
 
  $ git branch -r
 
@@ -126,7 +126,7 @@ Powinieneś zobaczyć coś jak:
 
 origin/HEAD origin/master origin/experimental
 
-Lista ta ukazuje branches i HEAD odległego repozytorium, które mogą być również stosowane w zwykłych poleceniach Git. Przyjmijmy, na przykład, że wykonałaś wiele commits i chciałbyś uzyskać porównanie do ostatnio ściągniętej wersji. Możesz przeszukać logi za odpowiednim hashem SHA1, ale dużo prościej jest podać:
+Lista ta ukazuje 'branche' i HEAD odległego repozytorium, które mogą być również stosowane w zwykłych poleceniach Gita. Przyjmijmy, na przykład, że wykonałaś wiele 'commits' i chciałabyś uzyskać porównanie do ostatnio ściągniętej wersji. Możesz przeszukać logi za odpowiednim hashem SHA1, ale dużo prościej gdy podasz:
 
  $ git diff origin/HEAD
 
@@ -145,23 +145,23 @@ Teraz przyłączyliśmy jeden 'branch' z dwóch repozytoriów i uzyskaliśmy ła
 
  $ git diff origin/experimental^ inny/jakiś_branch~5
 
-Co jednak zrobić, gdy chcemy porównać zmiany w nich bez wpływu na naszą pracę? Innymi słowami, chcemy zbadać ich 'branches' bez importowania ich zmian do naszego katalogu roboczego. Zamiast 'pull' skorzystaj z:
+Co jednak zrobić, gdy chcemy porównać zmiany w nich bez wpływu na naszą pracę? Innymi słowami, chcemy zbadać ich 'branche' bez importowania ich zmian do naszego katalogu roboczego. Zamiast 'pull' skorzystaj z:
 
  $ git fetch      # Fetch z origin, standard.
  $ git fetch inne # Fetch od drugiego programisty.
 
-Polecenie to załaduje jedynie historię Mimo, że nasz katalog pozostał bez zmian, możemy teraz referować z każdego repozytorium poprzez polecenia Gita, ponieważ posiadamy lokalną kopię.
+Polecenie to załaduje jedynie historię. Mimo, że nasz katalog pozostał bez zmian, możemy teraz referować z każdego repozytorium poprzez polecenia Gita, ponieważ posiadamy lokalną kopię.
 
-Przypomnij sobie, że 'pull' za kulisami to to samo co 'fetch' z następującym za nim *merge*. W normalnym wypadku wykonalibyśmy *pull*, bo chcielibyśmy przywołać również ostatnie 'commmits'. Ta przywołana sytuacja jest wyjątkiem wartym wspomnienia.
+Przypomnij sobie, że 'pull' za kulisami robi to samo co 'fetch' z następującym za nim *merge*. W normalnym wypadku wykonalibyśmy *pull*, bo chcielibyśmy przywołać również ostatnie 'commmits'. Ta sytuacja, to wyjątek warty wspomnienia.
 
-Sprawdź *git help remote* by zobaczyć, jak usuwa się repozytoria, ignoruje pewne branches i więcej.
+Sprawdź *git help remote* by zobaczyć, jak usuwa się repozytoria, ignoruje pewne 'branche' i więcej.
 
 === Moje ustawienia ===
 
-W moich projektach preferuję, gdy pomagający mi programiści przygotują własne repozytoria z których mogę wykonać 'pull'. Większość hosterów Gita pozwala na utworzenie jednym kliknięciem twojego własnego forka innego projektu.
+W moich projektach preferuję, gdy pomagający mi programiści przygotują własne repozytoria, z których mogę wykonać 'pull'. Większość hosterów Gita pozwala na utworzenie jednym kliknięciem twojego własnego forka innego projektu.
 
 Gdy przywołałem moją gałęź korzystam z poleceń Gita dla nawigacji i kontroli zmian, które najlepiej, gdy są dobrze zorganizowane i udokumentowane. Wykonuję 'merge' moich własnych zmian i przeprowadzam ewentualnie dalsze zmiany. Gdy już jestem zadowolony, 'push' do zentralnego repozytorium.
 
 Mimo, iż dość rzadko otrzymuję posty, jestem zdania, że ta metoda się opłaca. Zobacz http://torvalds-family.blogspot.com/2009/06/happiness-is-warm-scm.html[Post na Blogu Linusa Torvalds (po angielsku)].
 
-Pozostając w świecie Gita jest wygodniejsze niż otrzymywanie patchów, ponieważ zaoszczędza mi to konwertowanie ich do 'commits' Gita. Poza tym Git martwi się o szczegóły, jak nazwa autora i adres e-maila, tak samo jak i o datę i godzinę oraz motywuje autora do opisywania swoich zmian.
+Pozostając w świecie Gita jest wygodniejsze niż otrzymywanie patchów, ponieważ zaoszczędza mi to ich konwertowania do 'commits' Gita. Poza tym Git martwi się o szczegóły, jak o nazwę autora i adres e-maila, tak samo jak i o datę i godzinę oraz motywuje autora do opisywania swoich zmian.

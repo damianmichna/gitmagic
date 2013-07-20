@@ -4,11 +4,11 @@ By wprowadzić w zagadnienie kontroli wersji, posłużę się pewną analogią. 
 
 === Praca jest zabawą ===
 
-Gram w gry komputerowe chyba już przez całe moje życie. W przeciwieństwie do tego, systemy kontroli wersji zacząłem stosować dopiero jako dorosły. Przypuszczam, że nie jestem tu odosobniony, a porównanie to pomoże mi w prosty sposób wytłumaczyć jego idee.
+Gram w gry komputerowe chyba już przez całe życie. W przeciwieństwie do tego, systemy kontroli wersji zacząłem stosować dopiero jako dorosły. Przypuszczam, że nie jestem tu odosobniony, porównanie do gier pomoże mi w prosty sposób wytłumaczyć jego idee.
 
-Wyobraź sobie pracę nad twoim kodem albo edycję dokumentu jak granie na komputerze. Jeśli dobrze ci poszło, chcesz zabezpieczyć swoje osiągnięcia. W tym celu klikasz na 'zapisz' w wybranym edytorze.
+Wyobraź sobie pracę nad kodem albo edycję dokumentu jak granie na komputerze. Jeśli dobrze ci poszło, chcesz zabezpieczyć swoje osiągnięcia. W tym celu klikasz w wybranym edytorze na 'zapisz'.
 
-Niestety wymaże to poprzednio zapamiętaną wersję. To jak w grach starej szkoły, które posiadały pamięć na zapisanie tylko jednego stanu: oczywiście, mogłaś zapamiętać, ale już nigdy nie mogłaś powrócić do poprzednio zapisanej wersji. To była hańba, bo być może poprzednio zabezpieczony stan znajdował się w jakimś bardzo interesującym miejscu gry, do którego chętnie chciałbyś jeszcze kiedyś wrócić. Albo jeszcze gorzej, twój zabezpieczony stan utknął w niemożliwym do dokończenia gry miejscu i musisz zacząć wszystko od początku.
+Niestety wymaże to poprzednio zapamiętaną wersję. To jak w grach starej szkoły, które posiadały pamięć na zapisanie tylko jednego stanu: oczywiście, mogłaś zapamiętać, ale już nigdy nie mogłaś powrócić do poprzednio zapisanej wersji. To była hańba, bo być może poprzednio zabezpieczony stan znajdował się w jakimś bardzo interesującym miejscu gry, do którego chętnie chciałabyś jeszcze kiedyś wrócić. Albo jeszcze gorzej, twój zabezpieczony stan utknął w niemożliwym do dokończenia gry miejscu i musisz zacząć wszystko od początku.
 
 === Kontrola wersji ===
 
@@ -18,13 +18,13 @@ Skomplikujmy teraz trochę cały ten problem. Powiedzmy, że posiadasz całą ma
 
 Niektóre gry komputerowe składały się rzeczywiście z jednego katalogu pełnego plików. Gry ukrywały szczegóły przed graczem i prezentowały wygodny interfejs, do zarządzania różnymi wersjami katalogu.
 
-Systemy kontroli wersji nie różnią się tutaj zbytnio. Wszystkie posiadają wygodne interfejsy, umożliwiającymi zarządzanie katalogami pełnymi plików. Możesz archiwizować stan katalogu tak często jak często zechcesz i później możesz do każdego z tych punktów powrócić. W przeciwieństwie jednak do gier, są one z reguły wszystkie zoptymalizowane pod kątem oszczędności pamięci. W większości przypadków tylko niewiele danych ulega zmianie pomiędzy dwoma wersjami, a same zmiany nie są zbyt obszerne. Oszczędność miejsca na dysku polega głównie na zapamiętywaniu jedynie różnic, a nie kopii całego katalogu.
+Systemy kontroli wersji nie różnią się tutaj zbytnio. Wszystkie posiadają wygodne interfejsy umożliwiające zarządzanie katalogami pełnymi plików. Możesz archiwizować stan katalogu tak często jak często zechcesz i później możesz do każdego z tych punktów powrócić. W przeciwieństwie jednak do gier, są one z reguły wszystkie zoptymalizowane pod kątem oszczędności pamięci. W większości przypadków tylko niewiele danych ulega zmianie pomiędzy dwoma wersjami, a same zmiany nie są zbyt obszerne. Oszczędność miejsca na dysku polega głównie na zapamiętywaniu jedynie różnic, a nie kopii całego katalogu.
 
 === Kontrola rozproszona ===
 
 Wyobraź sobie teraz bardzo trudną grę komputerową. Tak trudną, że wielu doświadczonych graczy na całym świecie postanawia o wspólnych siłach przejść grę, wymieniając się w tym celu swoimi wynikami. 'Speedruns' mogą posłużyć jako przykład z prawdziwego życia: gracze, którzy wyspecjalizowali się w różnych poziomach gry współpracują ze sobą dla uzyskania fascynujących wyników.
 
-W jaki sposób skonstruowałbyś taki system, który w prosty sposób byłby w stanie udostępnić osiągnięcia innych? I dodawał nowe?
+W jaki sposób skonstruowałabyś taki system, który w prosty sposób byłby w stanie udostępnić osiągnięcia innych? I dodawał nowe?
 
 Kiedyś każdy projekt korzystał z własnego scentralizowanego systemu kontroli wersji. Jeden serwer zapamiętywał wszystkie gry, nikt inny. Każdy gracz posiadał jedynie kilka zapamiętanych na swoim komputerze gier. Jeśli jakiś gracz chciał popchać grę trochę do przodu, musiał najpierw zładować z serwera jej aktualny stan, trochę pograć, zapisać własny stan, a następnie załadować na serwer, by mógł go wykorzystać ktoś inny.
 
@@ -40,18 +40,18 @@ Stworzenie pierwszego klonu może wydać się drogie, przede wszystkim, jeśli p
 
 Szeroko rozpowszechnianym nieporozumieniem jest opinia, że rozproszony system nie nadaje się dla projektów wymagających oficjalnego centralnego repozytorium. Nic bardziej mylnego. Fotografując kogoś nie kradniemy od razu jego duszy. Tym samym klonowanie centralnego repozytorium nie umniejsza jego znaczenia.
 
-Jednym z pierwszych pozytywnych skutków jest to, iż wszystko co potrafi scentralizowany system kontroli wersji, dobrze skonstruowany system rozproszony potrafi lepiej. Zasoby sieciowe są po prostu droższe niż zasoby lokalne. Nawet jeśli w późniejszym czasie dostrzeżemy pewne niedociągnięcia systemów rozproszonych, można powyższe przyjąć jako ogólną zasadę, unikając niestosownych porównań.
+Jednym z pierwszych pozytywnych skutków jest to, iż wszystko co potrafi scentralizowany system kontroli wersji, dobrze skonstruowany system rozproszony potrafi lepiej. Zasoby sieciowe są po prostu droższe niż zasoby lokalne. Nawet jeśli w późniejszym czasie dostrzeżemy pewne niedociągnięcia systemów rozproszonych, można powyższe przyjąć jako ogólną zasadę, ustrzegając się niestosownych porównań.
 
-Mały projekt wykorzysta prawdopodobnie tylko ułamek możliwości systemu. Ale, by od razu z tego powodu korzystać z prostszego systemu, nie posiadającego możliwości późniejszej rozbudowy, to tak jak stosowanie rzymskich cyfr do przeprowadzania obliczeń na małych liczbach.
+Mały projekt wykorzysta prawdopodobnie tylko ułamek możliwości systemu. Ale, by od razu z tego powodu korzystać z uprostrzonego systemu, nie posiadającego możliwości późniejszej rozbudowy? To tak jak stosowanie rzymskich cyfr do przeprowadzania obliczeń na małych liczbach.
 
-Ponadto możliwe, że twój projekt przerośnie początkowe oczekiwania. Używanie Gita od samego początku, to jak noszenie ze sobą szwajcarskiego scyzoryka, nawet gdy najczęściej służy do otwierania butelek. Być może pewnego dnia będziesz pilnie potrzebowała użyć śrubokręt, ucieszysz się, że masz przy sobie coś więcej niż tylko zwykły otwieracz.
+Ponadto możliwe, że twój projekt przerośnie początkowe oczekiwania. Używanie Gita od samego początku, to jak noszenie ze sobą szwajcarskiego scyzoryka, nawet gdy najczęściej służy do otwierania butelek. Być może pewnego dnia będziesz pilnie potrzebowała użyć śrubokrętu, ucieszysz się, że masz przy sobie coś więcej niż tylko zwykły otwieracz.
 
 === Kolizje przy scalaniu ===
 
-Do przedstawienia tego tematu wykorzystanie analogii do gier komputerowych byłoby naciągane. Wyobraźmy sobie znowu, że edytujemy dokument.
+Do przedstawienia tego tematu wykorzystanie analogii do gier komputerowych byłoby naciągane. Wyobraźmy sobie ponownie, że edytujemy dokument.
 
 Alicja dodaje linijkę na początku dokumentu, natomiast Bob linijkę na jego końcu. Obydwoje ładują swoje zmiany na serwer. Większość systemów automatycznie wybierze rozsądną drogę: zaakceptuje obie zmiany i połączy je ze sobą, tym samym obje poprawki wpłyną do dokumentu.
 
 Wyobraź sobie jednak, że Alicja i Bob dokonują zmian w tej samej linijce. W tym wypadku dalsza praca nie będzie możliwa bez ludzkiego udziału. Druga z osób, próbująca zładować dokument na serwer, zostanie poinformowana o wystąpieniu konfliktu podczas łączenia ('merge') i musi zadecydować, którą ze zmian przyjąć, ewentualnie ponownie zrewidować całą linijkę.
 
-Mogą wystąpić dużo bardziej skomplikowane sytuacje. Systemy kontroli wersji potrafią poradzić sobie z prostymi przypadkami a te trudniejsze pozostawiają ludziom. Zazwyczaj sposób ich zachowania można skonfigurować.
+Mogą wystąpić dużo bardziej skomplikowane sytuacje. Systemy kontroli wersji potrafią poradzić sobie z prostymi przypadkami, a te trudniejsze pozostawiają ludziom. Zazwyczaj sposób ich zachowania można skonfigurować.

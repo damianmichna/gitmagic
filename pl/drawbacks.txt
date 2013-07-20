@@ -1,6 +1,6 @@
 == Załącznik A: Niedociągnięcia Gita ==
 
-O kilku problemach mogących wystąpić z Gitem nie wspomniałem do tej pory. Niektóre z nich można łatwo rozwiązać korzystając ze skryptów i 'hooks', inne wymagają reorganizacji i ponownego zdefiniowania całego projektu, a na rozwiązanie kilku innych uniedogodnień możesz tylko uzbroić się w cierpliwość i czekać na ich usunięcie. Albo jeszcze lepiej, samemu się nimi zająć i spróbować pomóc.
+O kilku problemach mogących wystąpić z Gitem nie wspomniałem do tej pory. Niektóre z nich można łatwo rozwiązać korzystając ze skryptów i 'hooks', inne wymagają reorganizacji i ponownego zdefiniowania całego projektu, a na rozwiązanie kilku innych uniedogodnień możesz tylko uzbroić się w cierpliwość i czekać na ich usunięcie. Albo jeszcze lepiej, samej się nimi zająć i spróbować pomóc.
 
 === Słabości SHA1 ===
 
@@ -18,13 +18,13 @@ Korzystanie z Gita pod Microsoft Windows może być frustrujące:
 
 === Pliki niepowiązane ===
 
-Jeśli twój projekt jest bardzo duży i zawiera wiele plików, które nie są bezpośrednio ze sobą związane, mimo to jednak często zostają zmieniane, Git może tu działać gorzej niż inne systemy, ponieważ nie prowadzi monitoringu poszczególnych plików. Git kontroluje zawsze całość projektu, co w normalnym wypadku jest zaletą.
+Jeśli twój projekt jest bardzo duży i zawiera wiele plików, które nie są bezpośrednio ze sobą związane, mimo to jednak często zostają zmieniane, Git może tu działać gorzej niż inne systemy, ponieważ nie prowadzi monitoringu poszczególnych plików. Git kontroluje zawsze całość projektu, co w normalnym wypadku jest jego zaletą.
 
 Jednym z możliwych rozwiązań mogłoby być podzielenie twojego projektu na kilka mniejszych, w których znajdują się jedynie pliki od siebie zależne. Korzystaj z *git submodule* jeśli mimo to chcesz cały twój projekt mieć w tym samym repozytorium.
 
 === Kto nad czym pracuje? ===
 
-Niektóre systemy kontroli wersji zmuszają cię, by w jakiś sposób oznaczyć pliki nad którymi pracujesz. Mimo że jest to bardzo uciążliwe, gdyż wymaga ciągłej komunikacji z serwerem centralnym, posiada to też swoje zalety:
+Niektóre systemy kontroli wersji zmuszają cię, by w jakiś sposób oznaczyć pliki nad którymi pracujesz. Mimo, że jest to bardzo uciążliwe, gdyż wymaga ciągłej komunikacji z serwerem centralnym, posiada to też swoje zalety:
 
 1. Różnice zostają szybko znalezione, ponieważ wystarczy skontrolować wyłącznie oznaczone pliki.
 
@@ -34,7 +34,7 @@ Używając odpowiednich skryptów uda ci się to również przy pomocy Gita. Wym
 
 === Historia pliku ===
 
-Ponieważ Git loguje zmiany tylko dla całości projektu jako takiego, rekonstrukcja przebiegu zmian pojedynczego pliku jest bardziej pracochłonna, niż w innych systemach kontrolujących pojedyncze .
+Ponieważ Git loguje zmiany tylko dla całości projektu jako takiego, rekonstrukcja przebiegu zmian pojedynczego pliku jest bardziej pracochłonna, niż w innych systemach kontrolujących pojedyncze.
 
 Te wady są w większości przypadków uznawane za marginalne i nie są brane pod uwagę, ponieważ inne operacje są bardzo wydajne. Na przykład polecenie `git checkout` jest szybsze niż `cp -a`, zmiany w zakresie całego projektu daje się lepiej komprymować niż zbiór zmian na bazie pojedynczych plików.
 
@@ -42,11 +42,11 @@ Te wady są w większości przypadków uznawane za marginalne i nie są brane po
 
 Wykonanie klonu jest kosztowniejsze niż w innych systemach kontroli wersji jeśli istnieje długa historia.
 
-Początkowy koszt spłaca się jednak na dłuższą metę ponieważ większość przyszłych operacji przeprowadzane będzie szybko i offline.  Niemniej jednak istnieją sytuacje, w których lepiej utworzyć powierzchowny klon korzystając z opcji `--depth`. Trwa to o wiele krócej, taki klon jednak posiada też tylko ograniczoną funkcjonalność.
+Początkowy koszt spłaca się jednak na dłuższą metę ponieważ większość przyszłych operacji przeprowadzane będzie szybko i offline. Niemniej jednak istnieją sytuacje, w których lepiej utworzyć powierzchowny klon korzystając z opcji `--depth`. Trwa to o wiele krócej, taki klon jednak posiada też tylko ograniczoną funkcjonalność.
 
 === Niestałe projekty ===
 
-Git został napisany z myślą optymalizacji prędkości działania przy dokonywaniu wielkich zmian.  Ludzie robią jednak pomniejsze zmiany z wersji na wersję. Jakaś poprawka tutaj, jakaś nowa funkcja gdzie indziej, poprawienie komentarzy, itd. Ale jeśli twoje dane znacznie się od siebie różnią pomiędzy następującymi po sobie wersjami, to chcąc nie chcąc przy każdym 'commit' projekt zwiększy się o te zmiany.
+Git został napisany z myślą optymalizacji prędkości działania przy dokonywaniu wielkich zmian. Ludzie robią jednak pomniejsze zmiany z wersji na wersję. Jakaś poprawka tutaj, jakaś nowa funkcja gdzie indziej, poprawienie komentarzy, itd. Ale jeśli twoje dane znacznie się od siebie różnią pomiędzy następującymi po sobie wersjami, to chcąc nie chcąc przy każdym 'commit' projekt zwiększy się o te zmiany.
 
 Nie wymyślono jednak do tej pory niczego w żadnym systemie kontroli wersji, by móc temu zapobiec, tutaj jednak użytkownik Gita cierpi najbardziej, ponieważ w normalnym wypadku klonuje cały przebieg projektu.
 

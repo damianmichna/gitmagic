@@ -1,8 +1,8 @@
 == Lekcja historii ==
 
-Jedną z charakterystycznych cech rozproszonej natury Git jest to, że jego kronika historii może być łatwo edytowana. Ale jeśli masz zamiar manipulować przeszłością, bądź ostrożny: zmieniaj tylko tą część historii, którą wyłącznie jedynie ty sam posiadasz. Tak samo jak Narody ciągle dyskutują, który jakie popełnił okrucieństwa, popadniesz w kłopoty przy synchronizacji, jeśli ktoś inny posiada klon z różniącą się historią i jeśli te odgałęzienia mają się wymieniać.
+Jedną z charakterystycznych cech rozproszonej natury Gita jest to, że jego kronika historii może być łatwo edytowana. Ale jeśli masz zamiar manipulować przeszłością, bądź ostrożny: zmieniaj tylko tą część historii, którą wyłącznie jedynie ty sama posiadasz. Tak samo jak Narody ciągle dyskutują, który jakie popełnił okrucieństwa, popadniesz w kłopoty przy synchronizacji, jeśli ktoś inny posiada klon z różniącą się historią i jeśli te odgałęzienia mają się wymieniać.
 
-Niektórzy programiści zarzekają się w kwestii nienaruszalności historii - ze wszystkimi jej błędami i niedociągnięciami. Inni uważają, że odgałęzienia powinny dobrze się prezentować nim zostaną przedstawione publicznie. Git jest wyrozumiały dla obydwu stron. Tak samo jak 'clone', 'branch', czy 'merge', możliwość zmian kroniki historii to tylko kolejna mocna strona Gita. Stosowanie lub nie, tej możliwości zależy wyłącznie od ciebie.
+Niektórzy programiści zarzekają się w kwestii nienaruszalności historii - ze wszystkimi jej błędami i niedociągnięciami. Inni uważają, że odgałęzienia powinny dobrze się prezentować nim zostaną przedstawione publicznie. Git jest wyrozumiały dla obydwu stron. Tak samo jak 'clone', 'branch', czy 'merge', możliwość zmian kroniki historii to tylko kolejna mocna strona Gita. Stosowanie jej lub nie, zależy wyłącznie od ciebie.
 
 === Muszę się skorygować ===
 
@@ -18,7 +18,7 @@ $ git commit --amend -a
 
 === ... i jeszcze coś ===
 
-Załóżmy, że poprzedni problem będzie 10 razy gorszy. Po dłuższej sesji zrobiłaś całą masę 'commits'. Nie jesteś jednak szczęśliwy z takiego zorganizowania, a niektóre z 'commits' mogłyby być inaczej sformułowane. Wpisujesz:
+Załóżmy, że poprzedni problem będzie 10 razy gorszy. Po dłuższej sesji zrobiłaś całą masę 'commits'. Nie jesteś jednak szczęśliwa z takiego ich zorganizowania, a niektóre z 'commits' mogłyby być inaczej sformułowane. Wpisujesz:
 
  $ git rebase -i HEAD~10
 
@@ -36,12 +36,12 @@ Tutaj 5c6eb73 jest najstarszym 'commit', a 100834f najnowszym. By to zmienić:
 - Zamień `pick` na:
    * `edit`  by zaznaczyć 'commit' do 'amend'.
    * `reword`, by zmienić opisy logu.
-   * `squash` by połączyć 'commit' z poprzednim ('merge').
-   * `fixup` by połączyć 'commit' z poprzednim ('merge') i usunąć zapisy z logu.
+   * `squash` by połączyć 'commit' z poprzednim .
+   * `fixup` by połączyć 'commit' z poprzednim i usunąć zapisy z logu.
 
 Na przykład chcemy zastąpić drugi `pick` na `squash`:
 
-Zapamiętaj i zakończ. Jeśli zaznaczyłaś jakiś 'commit' do 'edit', wpisz:
+Zapamiętaj i zakończ. Jeśli zaznaczyłaś jakiś 'commit' do edycji, wpisz:
 
  $ git commit --amend
 
@@ -55,7 +55,7 @@ into the next commit up: think ``squash up''.
 
 Git połączy wiadomości logów i zaprezentuje je do edycji. Polecenie *fixup* pominie ten krok, wciśnięte logi zostaną pominięte.
 
-Jeśli zaznaczyłeś 'commit' opcją *edit*, Git przeniesie cię do najstarszego takiego 'commit'. Możesz użyć 'amend', jak opisane w poprzednim rozdziale, i utworzyć nowy 'commit' mający się tu znaleźć. Gdy już będziesz zadowolony z ``retcon'', przenieś się na przód w czasie:
+Jeśli zaznaczyłaś 'commit' opcją *edit*, Git przeniesie cię do najstarszego takiego 'commit'. Możesz użyć 'amend', jak opisane w poprzednim rozdziale, i utworzyć nowy 'commit' mający się tu znaleźć. Gdy już będziesz zadowolona z ``retcon'', przenieś się na przód w czasie:
 
  $ git rebase --continue
 
@@ -69,23 +69,23 @@ A więc, stosuj polecenie 'commit' wcześnie i często: możesz później zawsze
 
 === Lokalne zmiany na koniec ===
 
-Pracujesz nad aktywnym projektem. Z biegiem czasu nagromadziło się wiele 'commits' i wtedy chcesz zsynchronizować za pomocą 'merge' z oficjalną gałęzią. Ten cykl powtarza się kilka razy zanim jesteś gotowy na 'push' do centralnego drzewa.
+Pracujesz nad aktywnym projektem. Z biegiem czasu nagromadziło się wiele 'commits' i wtedy chcesz zsynchronizować je za pomocą 'merge' z oficjalną gałęzią. Ten cykl powtarza się kilka razy zanim jesteś gotowa na 'push' do centralnego drzewa.
 
-Teraz jednak historia w twoim lokalnym klonie jest chaotycznym pomieszaniem twoich zmian i zmian z oficjalnego drzewa. Chciałbyś raczej widzieć twoje zmiany uporządkowane chronologicznie w jednej sekcji i za oficjalnymi zmianami.
+Teraz jednak historia w twoim lokalnym klonie jest chaotycznym pomieszaniem twoich zmian i zmian z oficjalnego drzewa. Chciałabyś raczej widzieć twoje zmiany uporządkowane chronologicznie w jednej sekcji i za oficjalnymi zmianami.
 
 To zadanie dla *git rebase*, jak opisano powyżej. W wielu przypadkach możesz skorzystać z przełącznika *--onto* by zapobiec interakcji.
 
-Przeczytaj też *git help rebase* dla zapoznania sie z obszernymi przykładami tej zadziwiającej funkcji. Możesz również podzielić 'commits'. Możesz nawet przeorganizować 'branches' w repozytorium.
+Przeczytaj też *git help rebase* dla zapoznania sie z obszernymi przykładami tej zadziwiającej funkcji. Możesz również podzielić 'commits'. Możesz nawet przeorganizować 'branche' w repozytorium.
 
-Bądź ostrożny korzystając z 'rebase', to bardzo mocne polecenie. Zanim dokonasz skomplikowanych 'rebase', zrób backup za pomocą *git clone*
+Bądź ostrożna przy korzystaniu z 'rebase', to bardzo mocne polecenie. Zanim dokonasz skomplikowanych 'rebase', zrób backup za pomocą *git clone*
 
 === Przepisanie historii ===
 
-Czasami potrzebny ci rodzaj systemu kontroli porównywalnego do wyretuszowania osób z oficjalnego zdjęcia, by w stalinowski sposób wymazać je z historii. Wyobraź sobie, że chcesz opublikować projekt, jednak zawiera on pewny plik, który z jakiegoś ważnego powodu musi pozostać utajniony. Być może zapisałem numer karty kredytowej w danej tekstowej i nieumyślnie dodałem do projektu? Skasowanie tej danej nie ma sensu, ponieważ poprzez starsze 'commits' można nadal ją przywołać. Musimy ten plik usunąć ze wszystkich 'commits':
+Czasami potrzebny ci rodzaj systemu kontroli porównywalnego do wyretuszowania osób z oficjalnego zdjęcia, by w stalinowski sposób wymazać je z historii. Wyobraź sobie, że chcesz opublikować projekt, jednak zawiera on pewny plik, który z jakiegoś ważnego powodu musi pozostać utajniony. Być może zapisałaś numer karty kredytowej w danej tekstowej i nieumyślnie dodałaś do projektu? Skasowanie tej danej nie ma sensu, ponieważ poprzez starsze 'commits' można nadal ją przywołać. Musimy ten plik usunąć ze wszystkich 'commits':
 
  $ git filter-branch --tree-filter 'rm bardzo/tajny/plik' HEAD
 
-Sprawdź *git help filter-branch*, gdzie przykład ten został wytłumaczony i przytoczona została jeszcze szybsza metoda. Ogólnie poprzez *filter-branch* da się dokonać zmian w dużych zakresach historii poprzez tylko jedno polecenie.
+Sprawdź *git help filter-branch*, gdzie przykład ten został wytłumaczony i przytoczona została jeszcze szybsza metoda. Ogólnie poprzez *filter-branch* da się dokonać zmian w dużych zakresach historii poprzez użycie tylko jednego polecenia.
 
 Po tej operacji katalog +.git/refs/original+ opisuje stan przed jej wykonaniem. Sprawdź czy 'filter-branch' zrobił to, co od niego oczekiwałaś, następnie skasuj ten katalog zanim wykonasz następne polecenia 'filter-branch'.
 
@@ -94,11 +94,11 @@ Wreszcie zamień wszystkie klony twojego projektu na zaktualizowaną wersję, je
 === Tworzenie historii ===
 
 [[makinghistory]]
-Masz zamiar przenieść projekt do Gita? Jeśli twój projekt był dotychczas zarządzany jednym z bardziej znanych systemów, to istnieje duże prawdopodobieństwo, że ktoś napisał już odpowiedni skrypt, który umożliwi ci eksportowanie do Gita całej historii.
+Masz zamiar przenieść projekt do Gita? Jeśli twój projekt był dotychczas zarządzany jednym z popularnych systemów, to istnieje duże prawdopodobieństwo, że ktoś napisał już odpowiedni skrypt, który umożliwi ci eksportowanie do Gita całej historii.
 
 W innym razie przyjrzyj się funkcji *git fast-import*, która wczytuje tekst w specjalnym formacie by następnie odtworzyć całą historię od początku. Często taki skrypt pisany jest pośpiesznie i służy do jednorazowego wykorzystania, aby tylko w jednym przebiegu udała się migracja projektu.
 
-Utwórz na przykład z następującej listy tymczasowy plik, na przykład jako: `/tmp/history`:
+Utwórz z następującej listy tymczasowy plik, na przykład jako: `/tmp/history`:
 ----------------------------------
 commit refs/heads/master
 committer Alice <alice@example.com> Thu, 01 Jan 1970 00:00:00 +0000
@@ -135,7 +135,7 @@ EOT
 
 ----------------------------------
 
-Następnie utwórz repozytorium Git z tymczasowego pliku poprzez wpisanie:
+Następnie utwórz repozytorium Gita z tymczasowego pliku poprzez wpisanie:
 
  $ mkdir project; cd project; git init
  $ git fast-import --date-format=rfc2822 < /tmp/history
@@ -186,10 +186,10 @@ W scentralizowanym systemie kontroli wersji praca nad kroniką historii jest sko
 
 Scentralizowane systemy wykluczają pracę offline i wymagają drogiej infrastruktury sieciowej, w szczególności gdy wzrasta liczba programistów. Najgorsze jednak, iż z czasem wszystkie operacje stają się wolniejsze, z reguły do osiągnięcia punktu, gdzie użytkownicy unikają zaawansowanych poleceń, aż staną się one absolutnie konieczne. W ekstremalnych przypadkach dotyczy to również poleceń podstawowych. Jeśli użytkownicy są zmuszeni do wykonywania powolnych poleceń, produktywność spada, ponieważ ciągle przerywany zostaje tok pracy.
 
-Dowiedziałem się o tym fenomenie na sobie samym. Git był pierwszym systemem kontroli wersji którego używałem. Szybko dorosłem do tej aplikacji i przyjąłem wiele funkcji za oczywiste. Wychodziłem też z założenia, że inne systemy są podobne: wybór systemu kontroli wersji nie powinien zbyt bardzo odbiegać od wyboru edytora tekstu, czy przeglądarki internetowej.
+Przekonałem się o tym fenomenie na sobie samym. Git był pierwszym systemem kontroli wersji którego używałem. Szybko dorosłem do tej aplikacji i przyjąłem wiele funkcji za oczywiste. Wychodziłem też z założenia, że inne systemy są podobne: wybór systemu kontroli wersji nie powinien zbyt bardzo odbiegać od wyboru edytora tekstu, czy przeglądarki internetowej.
 
-Byłem zszokowany, gdy musiałem później korzystać ze scentralizowanego systemu. Niesolidne połączenie internetowe ma niezbyt duży wpływ na Gita, praca staje się jednak prawie nie możliwa, gdy wymagana jest niezawodność porównywalny z lokalnym dyskiem. Poza tym sam łapałem się na tym, że unikałem pewnych poleceń i związanym z nimi czasem oczekiwania, w sumie wszystko to wpływało mocno na wypracowany przeze mnie system pracy.
+Byłem zszokowany, gdy musiałem później korzystać ze scentralizowanego systemu. Niesolidne połączenie internetowe ma niezbyt duży wpływ na Gita, praca staje się jednak prawie niemożliwa, gdy wymagana jest niezawodność porównywalny z lokalnym dyskiem. Poza tym sam łapałem się na tym, że unikałem pewnych poleceń i związanym z nimi czasem oczekiwania, w sumie wszystko to wpływało mocno na wypracowany przeze mnie system pracy.
 
-Gdy musiałem wykonywać powolne polecenia, z powodu ciągłego przerywanie toku myślenia, powodowałem nieporównywalne szkody dla całego przebiegu pracy. Podczas oczekiwania na zakończenie komunikacji pomiędzy serwerami dla przeczekania zaczynałem robić coś innego, na przykład czytałem maile albo pisałem dokumentację. Gdy wracałem do poprzedniego zajęcia, po zakończeniu komunikacji, dawno straciłem wątek i traciłem czas, by znów przypomnieć sobie co właściwie miałem zamiar zrobić. Ludzie nie potrafią dobrze dostosować się do częstej zmiany kontekstu.
+Gdy musiałem wykonywać powolne polecenia, z powodu ciągłego przerywania toku myślenia, czyniłem nieporównywalne szkody dla całego przebiegu pracy. Podczas oczekiwania na zakończenie komunikacji pomiędzy serwerami dla przeczekania zaczynałem robić coś innego, na przykład czytałem maile albo pisałem dokumentację. Gdy wracałem do poprzedniego zajęcia, po zakończeniu komunikacji, dawno straciłem wątek i traciłem czas, by znów przypomnieć sobie co właściwie miałem zamiar zrobić. Ludzie nie potrafią dobrze dostosować się do częstej zmiany kontekstu.
 
-Był też taki ciekawy efekt http://pl.wikipedia.org/wiki/Tragedia_wspólnego_pastwiska[tragedii wspólnego pastwiska]: przypominający przeciążenia w sieci - pojedyncze indywidua pochłaniają więcej pojemności sieci niż to konieczne, by uchronić się przed mogącymi ewentualnie wystąpić w przyszłości niedoborami. Suma tych starań pogarsza tylko przeciążenia, co motywuje jednostki do zużywania jeszcze większych zasobów, by ochronić się przed jeszcze dłuższymi czasami oczekiwania.
+Był też taki ciekawy efekt http://pl.wikipedia.org/wiki/Tragedia_wspólnego_pastwiska[tragedii wspólnego pastwiska]: przypominający przeciążenia w sieci - pojedyncze indywidua pochłaniają więcej pojemności sieci niż to konieczne, by uchronić się przed mogącymi ewentualnie wystąpić w przyszłości niedoborami. Suma tych starań pogarsza tylko przeciążenia, co motywuje jednostki do zużywania jeszcze większych zasobów, by ochronić się przed jeszcze gorszymi niedoborami.

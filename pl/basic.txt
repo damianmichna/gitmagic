@@ -1,6 +1,6 @@
 == Pierwsze kroki ==
 
-Zanim utoniemy w morzu poleceń Gita, przyjrzyjmy się najpierw kilku prostym poleceniom. Pomimo ich prostoty, wszystkie jednak są ważne i pożyteczne. W rzeczywistości, podczas pierwszych miesięcy pracy z Git nie wychodziłem poza zakres opisany w tym rozdziale
+Zanim utoniemy w morzu poleceń Gita, przyjrzyjmy się najpierw kilku prostym poleceniom. Pomimo ich prostoty, wszystkie jednak są ważne i pożyteczne. W rzeczywistości, podczas pierwszych miesięcy pracy z Gitem nie wychodziłem poza zakres opisany w tym rozdziale
 
 === Zabezpieczenie obecnego stanu ===
 
@@ -131,7 +131,7 @@ Jeśli posiadasz już kopię projektu wykonaną za pomocą *git clone*, możesz 
 
 Przypuśćmy, że napisałaś skrypt i chcesz go udostępnić innym. Mogłabyś poprosić ich, by zładowali go bezpośrednio z twojego komputera. Jeśli jednak zrobią to podczas gdy ty jeszcze wprowadzasz poprawki lub eksperymentujesz ze zmianami, mogłabyś przysporzyć im nieprzyjemności. Z tego powodu istnieje coś takiego jak cykl wydawniczy. Programiści regularnie pracują nad projektem, upubliczniają kod jednak dopiero, jeśli uznają, że nadaje się już do pokazania.
 
-Aby wykonać to za pomocą GIT, wejdź do katalogu w którym znajduje się twój skrypt:
+Aby wykonać to za pomocą Gita, wejdź do katalogu w którym znajduje się twój skrypt:
 
  $ git init
  $ git add .
@@ -193,4 +193,4 @@ Istnieją przynajmniej 3 rozwiązania. Załóżmy że znajdujemy się obecnie w 
 
  $ git revert B
 
-A które z tych rozwiązań jest najlepsze? To, które najbardziej tobie odpowiada. Korzystając z Git łatwo osiągnąć cel, czasami prowadzi do niego wiele dróg.
+A które z tych rozwiązań jest najlepsze? To, które najbardziej tobie odpowiada. Korzystając z Gitem łatwo osiągnąć cel, czasami prowadzi do niego wiele dróg.

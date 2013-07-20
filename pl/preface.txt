@@ -4,18 +4,19 @@ Sierpień 2007
 
 == Przedmowa ==
 
-http://git-scm.com/[Git] to rodzaj scyzoryka szwajcarskiego dla kontroli wersji. To niezawodne, wielostronne narzędzie do kontroli wersji o niezwykłej elastyczności przysprawia trudności już w samym jego poznaniu, nie wspominając o opanowaniu.
+http://git-scm.com/[Git] to rodzaj scyzoryka szwajcarskiego dla kontroli wersji. To niezawodne, wielostronne narzędzie do kontroli wersji o niezwykłej elastyczności,niestety sprawia trudności już w samym jego poznaniu, nie wspominając o jego opanowaniu.
 
 Jak stwierdził Arthur C. Clarke, każda wystarczająco postępowa technologia jest porównywalna z magią. Jest to wspaniałe podejście, by zacząć pracę z Gitem: Początkujący mogą zignorować jego wewnętrzne mechanizmy i ujrzeć jako rzecz, która urzeka przyjaciół swoimi niezwykłymi możliwościami, a przeciwników doprowadza do białej gorączki.
 
-Zamiast wchodzić w szczegóły, oferujemy proste instrukcje dla osiągnięcia zamierzonych efektów. W miarę regularnego korzystania stopniowo sam zrozumiesz jak każda z tych sztuczek funkcjonuje i jak dopasować podane instrukcje na twoje własne potrzeby.
+Zamiast wchodzić tutaj w szczegóły, oferuję proste instrukcje pozwalające osiągnąć zamierzone efekty. W miarę regularnego korzystania stopniowo sama zrozumiesz jak każda z tych sztuczek funkcjonuje i jak podane instrukcje dopasować na własne potrzeby.
 
 .Tłumaczenia
 
  - link:/\~blynn/gitmagic/intl/zh_cn/[Chiński uproszczony]: od JunJie, Meng i JiangWei. Konwertacja do link:/~blynn/gitmagic/intl/zh_tw/[Tradycjonalnego chińskiego] za pomocą +cconv -f UTF8-CN -t UTF8-TW+.
  - link:/~blynn/gitmagic/intl/fr/[Francuski]: od Alexandre Garel, Paul Gaborit, i Nicolas Deram. Również hostowany na http://tutoriels.itaapy.com/[itaapy].
  - link:/~blynn/gitmagic/intl/de/[Niemiecki]: od Benjamin Bellee i Armin Stebich; również hostowany na http://gitmagic.lordofbikes.de/[stronie Armina].
- - http://www.slideshare.net/slide_user/magia-git[Portugalski]: od Leonardo Siqueira Rodrigues [http://www.slideshare.net/slide_user/magia-git-verso-odt[wersja ODT]].
+ - http://www.slideshare.net/slide_user/magia-git[Portugalski]: od Leonardo Siqueira Rodrigues [http://www.slideshare.net/slide_user/magia-git-verso-odt[wersja ODT]]. 
+ - link:/~blynn/gitmagic/intl/pl/[Polski]: od Damian Michna.
  - link:/~blynn/gitmagic/intl/ru/[Rosyjski]: od Tikhon Tarnavsky, Mikhail Dymskov, i innych.
  - link:/~blynn/gitmagic/intl/es/[Hiszpański]: od Rodrigo Toledo i Ariset Llerena Tapia.
  - link:/~blynn/gitmagic/intl/uk/[Ukraiński]: od Volodymyr Bodenchuk.
@@ -39,11 +40,11 @@ François Marier jest mentorem pakietu Debiana, który uprzednio utworzony zosta
 
 Chciałbym podziękować również wszystkim innym za ich pomoc i dobre słowo. Chciałbym tu wszystkich wyszczególnić, mogłoby to jednak wzbudzić oczekiwania w szerokim zakresie.
 
-Gdybym o tobie przypadkowo zapomniał, daj mi znać albo przyślij mi po prostu patch.
+Gdybym o tobie przypadkowo zapomniał, daj mi znać albo przyślij mi po prostu 'patch'.
 
 === Licencja ===
 
-Ten poradnik publikowany jest na bazie licencji http://www.gnu.org/licenses/gpl-3.0.html[GNU General Public License Version 3]. Oczywiście, tekst źródłowy znajduje się w repozytorium Git i może zostać pobrany przez:
+Ten poradnik publikowany jest na bazie licencji http://www.gnu.org/licenses/gpl-3.0.html[GNU General Public License Version 3]. Oczywiście, tekst źródłowy znajduje się w repozytorium Gita i może zostać pobrany przez:
 
  $ git clone git://repo.or.cz/gitmagic.git # Utworzy katalog "gitmagic".
 
@@ -55,4 +56,4 @@ albo z serwerów lustrzanych:
  $ git clone git://git.assembla.com/gitmagic.git
  $ git clone git@bitbucket.org:blynn/gitmagic.git
 
-GitHub, Assembla, i Bitbucket pozwalają na prowadzienie prywatnych repozytorii, te dwa ostatnie za darmo.
+GitHub, Assembla, i Bitbucket pozwalają na prowadzenie prywatnych repozytoriów, te dwa ostatnie za darmo.

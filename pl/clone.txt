@@ -70,7 +70,7 @@ Programiści potrzebują dostępu poprzez SSH dla wykonania poleceń 'pull' i 'p
 
  $ git clone git://główny.serwer/ścieżka/do/projektu.git
 
-Protokół GIT przypomina HTTP: nie posiada autentyfikacji, a więc każdy może skopiować dane. Przy ustawieniach standardowych wykonanie 'push' za pomocą protokołu GIT jest zdezaktywowane.
+Protokół 'GIT' przypomina 'HTTP': nie posiada autentyfikacji, a więc każdy może skopiować dane. Przy ustawieniach standardowych wykonanie 'push' za pomocą protokołu 'GIT' jest zdezaktywowane.
 
 === Utajnienie źródła ===
 
@@ -82,7 +82,7 @@ Określenie: 'gołe' ('bare') repozytorium, powstało, ze względu na fakt, iż 
 
 Repozytorium 'bare' przejmuje rolę podobną do roli głównego serwera w scentralizowanych systemach kontroli wersji: dach twojego projektu. Programiści klonują twój projekt stamtąd i przesyłają tam ostatnie oficjalne zmiany. Często znajduje się ono na serwerze, którego jedynym zadaniem jest wyłącznie dystrybucja danych. Sama praca nad projektem przebiega na jego klonach, w ten sposób główne repozytorium daje sobie radę nie korzystając z katalogu roboczego.
 
-Wiele z poleceń Gita nie będzie funkcjonować w repozytoriach 'bare', chyba że ustawimy zmienną systemową GIT_DIR na katalog roboczy repozytorium albo przekażemy opcję `--bare`.
+Wiele z poleceń Gita nie będzie funkcjonować w repozytoriach 'bare', chyba że ustawimy zmienną systemową `GIT_DIR` na katalog roboczy repozytorium albo przekażemy opcję `--bare`.
 
 === 'Push', czy 'pull'? ===
 
@@ -90,7 +90,7 @@ Dlaczego wprowadziliśmy polecenie 'push', a nie pozostaliśmy przy znanym nam j
 
 W każdym bądź razie, nawet jeśli nawet mogło by to zadziałać, odradzam z korzystania z funkcji 'push' w ten sposób. Poprzez samo posiadanie katalogu roboczego na serwerze mogłoby powstać wiele nieścisłości.
 
-Krótko mówiąc, podczas gdy uczysz się korzystania z Git, korzystaj z polecenia 'push' tylko, gdy celem jest repozytorium 'bare', w wszystkich innych wypadkach z 'pull'.
+Krótko mówiąc, podczas gdy uczysz się korzystania z Gita, korzystaj z polecenia 'push' tylko, gdy celem jest repozytorium 'bare', w wszystkich innych wypadkach z 'pull'.
 
 === Rozwidlenie projektu ===
 
@@ -148,7 +148,7 @@ Teraz przejdź do nowego katalogu i podaj:
 
 Sposób w jaki przekażesz zmiany drugiemu systemowi zależy już od jego sposobu działania. Twój nowy katalog posiada dane ze zmianami przez ciebie wprowadzonymi. Wykonaj jeszcze adekwatne kroki żądane przez ten inny system kontroli wersji, by przekazać dane do centralnego repozytorium.
 
-Subversion, być może najlepszy z centralnych systemów, stosowany jest w wielu projektach. Komenda *git svn* automatyzuje powyższe kroki, może być użyta na przykład do http://google-opensource.blogspot.com/2008/05/export-git-project-to-google-code.html[exportu projektu Git do repozytorium Subversion].
+Subversion, być może najlepszy z centralnych systemów, stosowany jest w wielu projektach. Komenda *git svn* automatyzuje powyższe kroki, może być użyta na przykład do http://google-opensource.blogspot.com/2008/05/export-git-project-to-google-code.html[exportu projektu Gita do repozytorium Subversion].
 
 === Mercurial ===
 
