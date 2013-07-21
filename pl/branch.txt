@@ -41,6 +41,7 @@ Możesz zmieniać pomiędzy tymi wersjami pliku tak często jak zechcesz, każd�
 
 === Brudna robota ===
 
+[[branch]]
 Załóżmy, że pracujesz nad jakąś funkcją i musisz z jakiegokolwiek powodu wrócić o 3 wersje wstecz w celu wprowadzenia kilku poleceń print, aby sprawdzić jej działanie. Wtedy:
 
  $ git commit -a
